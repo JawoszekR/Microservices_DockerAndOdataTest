@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  microservice:
+    image: ${DOCKER_REGISTRY-}microservice
+    build:
+      context: .
+      dockerfile: Microservice/Dockerfile
+    ports: 
+    - "8080:80"
+    - "5001:443"
+    expose:
+    - "80"
+    - "443"
+    #links:
+    #- microservice2
+    #networks:
+    #  - my-network
+
+  #microservice2:
+  #  image: ${DOCKER_REGISTRY-}microservice2
+  #  build:
+  #    context: .
+  #    dockerfile: Microservice2/Dockerfile
+  #  ports: 
+  #  - "127.0.0.2:5100:80"
+  #  - "127.0.0.2:5101:443"
+  #  expose:
+  #  - "80"
+  #  - "443"
+  #  links:
+  #  - microservice
+  #  #networks:
+  #  #  - my-network
+
+#networks:
+#  my-network:
+#    external: true

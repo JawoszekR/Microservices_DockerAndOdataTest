@@ -5,11 +5,14 @@
     <UserSecretsId>404723e8-e071-4abb-968d-0c3a0aedf261</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+    <DockerComposeProjectPath>docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="7.5.5" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="OData.Swagger" Version="1.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.5" />
   </ItemGroup>
 
 </Project>
